@@ -94,7 +94,8 @@
 <body>
 
 <h1 class="logo">36Shop</h1>
-
+<h1 class="logo"> Nơi vẻ đẹp trở thành vĩnh cửu </h1>    
+<p id="message" style="text-align:center;color:green;font-weight:bold;font-size:20px;"></p>
 <nav>
     <a href="#gioithieu">Trang chủ</a>
     <a href="#sanpham">Sản phẩm</a>
@@ -247,7 +248,7 @@
         <h3>Set Trang Sức Cưới quý tộc</h3>
         <img src="y.jpg">
         <p>Giá: 200.000.000 VNĐ</p>
-        <a href="order.html?product=Set Trang Sức Cưới Hoàng Gia">
+<a href="order.html?product=Set Trang Sức Cưới Quý Tộc">
             <button>Mua ngay</button>
         </a>
     </div>
@@ -279,4 +280,18 @@
 
     </div>
 </footer>
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+if(params.get("success")){
+document.getElementById("message").innerText =
+"Yêu cầu của bạn đã được gửi đến 36Shop";
+
+setTimeout(function(){
+document.getElementById("message").innerText="";
+},5000);
+}
+
+</script>
 </html>
